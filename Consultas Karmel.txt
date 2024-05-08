@@ -1,0 +1,82 @@
+------------------------------------------------------------------ NUEVAS CONSULTAS ------------------------------------------------------------------
+GetAllJugadores
+
+url: http://127.0.0.1:8000/api/v4/public/jugadores/get
+
+GetJugadoresByNivel
+
+url: http://127.0.0.1:8000/api/v4/public/jugadores/get/nivel/3.7
+
+AddJugador
+
+url: http://127.0.0.1:8000/api/v4/public/jugadores/add
+
+data: 
+{
+    "nombre":"Iker Arana",
+    "edad":26,
+    "nivel":4.7
+}
+
+
+
+------------------------------------------------------------------ GET ------------------------------------------------------------------
+
+GetAllPistas
+
+url: http://127.0.0.1:8000/api/v4/public/pistas/get
+
+GetPistaById
+
+url: http://127.0.0.1:8000/api/v4/public/pistas/get/2
+
+GetAllReservas
+
+url: http://127.0.0.1:8000/api/v4/public/reservas/get
+
+------------------------------------------------------------------ POST ------------------------------------------------------------------
+
+AddReserva
+
+url: http://127.0.0.1:8000/api/v4/public/reservas/add
+
+data:
+
+{
+    "id_pista": 3,
+    "fecha": "2024-02-20",
+    "hora_inicio": "19:00",
+    "hora_fin": "20:00",
+    "cliente": 3
+}
+
+------------------------------------------------------------------ PUT ------------------------------------------------------------------
+
+ConfirmarReserva
+
+url: http://127.0.0.1:8000/api/v4/public/reservas/confirmar/3
+
+data:
+{
+    "jugador2": {
+      "nombre": "Jose Buces",
+      "edad": 44,
+      "nivel": 3.5
+    },
+    "jugador3": {
+      "nombre": "Koldo Olabarri",
+      "edad": 34,
+      "nivel": 3.7
+    },
+    "jugador4": {
+      "nombre": "Asier Garabieta",
+      "edad": 44,
+      "nivel": 3.1
+    }
+}
+
+------------------------------------------------------------------ DELETE ------------------------------------------------------------------
+
+AnularReserva
+
+url: http://127.0.0.1:8000/api/v4/public/reservas/anular/3
